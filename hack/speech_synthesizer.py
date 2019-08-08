@@ -2,13 +2,13 @@ import hack.constants
 import numpy as np
 
 
-class SpeechGenerator(object):
+class SpeechSynthesizer(object):
     """
     TODO: Rishabh
     Converts strings in English, French, or German to WAV audio.
     """
 
-    def generate(self, message, target_language):
+    def synthesize(self, message, target_language):
         """
         :param message: a string message in the target_language
         :param target_language: an integer corresponding to the chosen language (from hack.constants)

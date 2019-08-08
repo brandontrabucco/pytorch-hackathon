@@ -3,9 +3,9 @@ from setuptools import setup
 
 
 REQUIRED_PACKAGES = [
+    'numpy',
     'torch',
     'torchvision',
-    'numpy'
 ]
 
 
