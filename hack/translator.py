@@ -9,7 +9,7 @@ class Translator(object):
     def translate(self, english_message, target_language):
         """
         :param english_message: a string
-        :param target_language: an integer for the actual unpadded string length
+        :param target_language: an integer corresponding to the chosen language (from hack.constants)
         :return: a tuple of a string
         """
         actual_length = len(english_message)
