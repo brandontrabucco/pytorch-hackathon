@@ -1,4 +1,5 @@
 import hack.constants
+import numpy as np
 
 
 class SpeechGenerator(object):
@@ -13,3 +14,4 @@ class SpeechGenerator(object):
         :param target_language: an integer corresponding to the chosen language (from hack.constants)
         :return: raw audio that can be played my a WAV audio player
         """
+        return np.zeros([1, 1])
