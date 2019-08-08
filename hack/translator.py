@@ -3,6 +3,7 @@ import hack.constants
 
 class Translator(object):
     """
+    TODO: Ronny
     Translates from english to french, and german
     """
 
@@ -12,6 +13,8 @@ class Translator(object):
         :param target_language: an integer corresponding to the chosen language (from hack.constants)
         :return: a tuple of a string
         """
+        if target_language == hack.constants.ENGLISH:
+            return english_message
         actual_length = len(english_message)
         english_message = english_message[:hack.constants.MAX_PADDING]
         if actual_length < hack.constants.MAX_PADDING:

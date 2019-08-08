@@ -2,6 +2,10 @@ import hack.constants
 
 
 class SpeechGenerator(object):
+    """
+    TODO: Rishabh
+    Converts strings in English, French, or German to WAV audio.
+    """
 
     def generate(self, message, target_language):
         """
