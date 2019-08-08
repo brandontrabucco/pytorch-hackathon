@@ -3,6 +3,9 @@ from setuptools import setup
 
 
 REQUIRED_PACKAGES = [
+    'cython',
+    'pycocotools',
+    'matplotlib',
     'numpy',
     'torch',
     'torchvision',
