@@ -1,0 +1,14 @@
+<!doctype html>
+<title>Upload new File</title>
+<h1>Upload new File</h1>
+<form method=post enctype=multipart/form-data>
+<input type=file name=file>
+<input type=submit name=text value=Text>
+<input type=submit name=speech value=Speech>
+<input type=submit name=go value=Go>
+<select name="lang">
+{% for each in LANG %}
+  <option value="{{each}}">{{each}}</option>
+{% endfor %}
+</select>
+</form>
