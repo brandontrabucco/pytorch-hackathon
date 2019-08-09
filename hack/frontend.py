@@ -48,7 +48,7 @@ class Frontend(object):
         """
         return self._previous_caption
 
-    def get_speech_and_caption(self, jpeg_bytes, target_language):
+    def get_speech_and_caption(self):
         """
         :param jpeg_bytes: bytes for a jpeg image to be captioned (might need to specify an encoding)
         :param target_language: an integer corresponding to the chosen language (from hack.constants)

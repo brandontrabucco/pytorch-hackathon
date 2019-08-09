@@ -55,7 +55,7 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 @app.route('/get_previous_caption')
-def get_previous(filename):
+def get_previous_caption():
     return fe.get_previous_caption()
 
 #@app.route('/')
