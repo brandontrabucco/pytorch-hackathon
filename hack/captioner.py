@@ -1,4 +1,5 @@
 from hack.caption_utils.pythia_wrapper import PythiaWrapper
+import hack.constants as constants
 
 
 class Captioner(object):
@@ -17,5 +18,7 @@ class Captioner(object):
         :param jpeg_bytes: bytes for a jpeg image to be captioned (might need to specify an encoding)
         :return: a sentence in english (all lower case) with (20) words max.
         """
-        tokens = self.wrapper.predict(jpeg_bytes)
+        with open(constants.TEMP_FILE, "wb") as f:
+            f.write(jpeg_bytes)
+        tokens = self.wrapper.predict(constants.TEMP_FILE)
         return self.wrapper.caption_processor(tokens.tolist()[0])["caption"]

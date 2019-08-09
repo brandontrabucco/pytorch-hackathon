@@ -1,4 +1,5 @@
-from nmt_model import *
+from hack.nmt_model import *
+
 
 class Translator(object):
     """
@@ -18,9 +19,10 @@ class Translator(object):
             return self._to_french(self.message)
         elif target_language == 'de':
             return self._to_german(self.message)
+        elif target_language == 'en':
+            return self.message
         else: 
-            print("Please enter 'fr' or 'de' only.")
-            return None
+            print("Please enter 'en', 'fr' or 'de' only.")
 
     def _to_french(self, english_message):
         """

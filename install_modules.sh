@@ -26,11 +26,6 @@ python setup.py build
 python setup.py develop
 cd ../
 
-git clone https://github.com/NVIDIA/tacotron2.git
-cd tacotron2
-git submodule init; git submodule update
-cd ../
-
 wget https://www.dropbox.com/s/fsstcp9ygpr5t6w/tacotron2_statedict.pt
-wget https://www.dropbox.com/s/jetxhcvwk5wf77u/waveglow_256channels.p
+wget https://www.dropbox.com/s/jetxhcvwk5wf77u/waveglow_256channels.pt
 wget -O image.jpg http://farm1.staticflickr.com/36/119543586_0bec48d409_z.jpg

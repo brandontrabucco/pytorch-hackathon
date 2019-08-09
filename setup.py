@@ -7,9 +7,14 @@ REQUIRED_PACKAGES = [
     'opencv-python',
     'pyyaml',
     'numpy',
-    'torch',
+    'torch==1.2.0',
     'torchvision',
     'torchtext',
+    'fairseq',
+    'sacremoses',
+    'subword-nmt',
+    'regex',
+    'glow',
 ]
 
 
