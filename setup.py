@@ -4,7 +4,7 @@ from setuptools import setup
 
 REQUIRED_PACKAGES = [
     'pillow',
-    'cv2',
+    'opencv-python',
     'pyyaml',
     'numpy',
     'torch',

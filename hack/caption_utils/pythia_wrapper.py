@@ -59,7 +59,7 @@ class PythiaWrapper(object):
     def _build_pythia_model(self):
         state_dict = torch.load('model_data/butd.pth')
         model_config = self.config.model_attributes.butd
-        model_config.model_data_dir = "./"
+        model_config.model_data_dir = "../../"
         model = BUTD(model_config)
         model.build()
         model.init_losses_and_metrics()

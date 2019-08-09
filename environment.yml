@@ -86,6 +86,7 @@ dependencies:
   - xz=5.2.4=h14c3975_4
   - zeromq=4.3.1=he6710b0_3
   - zlib=1.2.11=h7b6447c_3
+  - zstd=1.3.7=h0b5b093_0
   - pip:
     - absl-py==0.7.1
     - astor==0.8.0
@@ -120,4 +121,3 @@ dependencies:
     - werkzeug==0.15.5
     - wrapt==1.11.2
 prefix: /global/homes/r/rgupta2/.conda/envs/pytorch
-
