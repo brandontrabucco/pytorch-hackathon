@@ -1,9 +1,7 @@
-import hack.constants
-
+from nmt_model import *
 
 class Translator(object):
     """
-    TODO: Ronny
     Translates from english to french, and german
     """
 
@@ -13,33 +11,36 @@ class Translator(object):
         :param target_language: an integer corresponding to the chosen language (from hack.constants)
         :return: a tuple of a string
         """
-        if target_language == hack.constants.ENGLISH:
-            return english_message
-        actual_length = len(english_message)
-        english_message = english_message[:hack.constants.MAX_PADDING]
-        if actual_length < hack.constants.MAX_PADDING:
-            english_message += " " * (actual_length - hack.constants.MAX_PADDING)
-        if target_language == hack.constants.GERMAN:
-            final_message, length = self._to_german(english_message, actual_length)
-            return final_message[:length]
-        if target_language == hack.constants.FRENCH:
-            final_message, length = self._to_french(english_message, actual_length)
-            return final_message[:length]
+        self.message = english_message
+        self.target_language = target_language
 
-    def _to_french(self, english_message, actual_length):
+        if target_language == 'fr':
+            return self._to_french(self.message)
+        elif target_language == 'de':
+            return self._to_german(self.message)
+        else: 
+            print("Please enter 'fr' or 'de' only.")
+            return None
+
+    def _to_french(self, english_message):
         """
         :param english_message: a string that is padded to 140 characters
         :param actual_length: an integer for the actual unpadded string length
         :return: a tuple of a string that is padded to 140 characters (translated sentence),
                  and an integer (the length of the actual string)
         """
-        return "", 0
+        return en2fr.translate(english_message)
 
-    def _to_german(self, english_message, actual_length):
+    def _to_german(self, english_message):
         """
         :param english_message: a string that is padded to 140 characters
         :param actual_length: an integer for the actual unpadded string length
         :return: a tuple of a string that is padded to 140 characters (translated sentence),
                  and an integer (the length of the actual string)
         """
-        return "", 0
+        return en2de.translate(english_message)
+
+# Test translation
+# test = Translator()
+# test.translate('first test: hello world', 'fr')
+# test.translate('second test: hello world', 'de')
