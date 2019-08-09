@@ -6,7 +6,7 @@ MAX_WORDS = 20
 
 # frontend
 LANG_DICT = {'English': ENGLISH, 'German': GERMAN, 'French': FRENCH}
-LANG = ['English', 'German', 'French']
+LANG = ['en', 'de', 'fr']
 
 TARGET_IMAGE_SIZE = [448, 448]
 CHANNEL_MEAN = [0.485, 0.456, 0.406]

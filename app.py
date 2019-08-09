@@ -1,4 +1,4 @@
-from flask import Flask, flash, request, redirect, url_for, send_from_directory, render_template
+from flask import Flask, flash, request, redirect, url_for, send_from_directory, render_template, render_template_string
 from hack.frontend import Frontend
 from hack.constants import LANG
 from wtforms import SelectField
@@ -46,7 +46,8 @@ def upload_file():
             else:
                 translated_sentence, wav_audio = fe.get_speech_and_caption(npimg, lang)
             #flash(translated_sentence)
-            return render_template('success.html', translated_sentence=translated_sentence)
+            return render_template_string('{{ x }}', x=str(translated_sentence))
+            #return render_template('success.html', translated_sentence=translated_sentence)
             #return redirect(url_for('uploaded_file', filename=filename))
     return render_template('basic.html', LANG=LANG)
 
