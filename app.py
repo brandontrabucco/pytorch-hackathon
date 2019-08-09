@@ -54,6 +54,10 @@ def upload_file():
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
+@app.route('/get_previous_caption')
+def get_previous(filename):
+    return fe.get_previous_caption()
+
 #@app.route('/')
 #def hello_world():
 #    fe = Frontend()
