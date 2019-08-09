@@ -3,12 +3,13 @@ from setuptools import setup
 
 
 REQUIRED_PACKAGES = [
-    'cython',
-    'pycocotools',
-    'matplotlib',
+    'pillow',
+    'cv2',
+    'pyyaml',
     'numpy',
     'torch',
     'torchvision',
+    'torchtext',
 ]
 
 
